@@ -1,6 +1,6 @@
 .root {
     display: grid;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 2fr 1fr;
     /* Adjust the ratio according to your preference */
     gap: 20px;
 }
@@ -21,6 +21,14 @@
     width: 100%;
     /* Ensure the ads use the full width of the column */
     margin: 20px 0;
+}
+
+.native-ad {
+    padding: 10px;
+    background-color: #151136;
+    border-radius: 10px;
+    height: 200px;
+    width: 100%;
 }
 
 nav ul {
