@@ -10,20 +10,30 @@
     window.googletag = window.googletag || { cmd: [] };
 
     googletag.cmd.push(() => {
-      // Define an ad slot for div with id "banner-ad".
+      // Define ad slots.
       googletag
         .defineSlot('/21974715207/test-300x600-riot-direct', [300, 600], "banner-ad")
         .addService(googletag.pubads());
-
       googletag
         .defineSlot('/21974715207/test-native', ['fluid'], 'div-gpt-ad-1713969330814-0')
         .addService(googletag.pubads());
 
-
       // Enable the PubAdsService.
       googletag.enableServices();
+
+      // Event listener for ad response.
+      googletag.pubads().addEventListener('slotRenderEnded', function (event) {
+        if (event.slot.getSlotElementId() === 'div-gpt-ad-1713969330814-0') {
+          if (event.isEmpty) {
+            document.getElementById('div-gpt-ad-1713969330814-0').style.display = 'none';
+          } else {
+            document.getElementById('div-gpt-ad-1713969330814-0').style.display = 'block';
+          }
+        }
+      });
     });
   </script>
+
   <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
 
