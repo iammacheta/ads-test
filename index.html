@@ -16,6 +16,11 @@
         .defineSlot('/21974715207/test-300x600-riot-direct', [300, 600], "banner-ad")
         .addService(googletag.pubads());
 
+      googletag
+        .defineSlot('/21974715207/test-native', ['fluid'], 'div-gpt-ad-1713969330814-0')
+        .addService(googletag.pubads());
+
+
       // Enable the PubAdsService.
       googletag.enableServices();
     });
@@ -24,11 +29,23 @@
 </head>
 
 <body>
+  <h3>Display 300x600</h3>
   <div id="banner-ad"></div>
   <script>
     googletag.cmd.push(() => {
       // Request and render an ad for the "banner-ad" slot.
       googletag.display("banner-ad");
+    });
+  </script>
+
+  <div style="height: 100px;"></div>
+
+  <h3>Native horizontal</h3>
+  <div id="div-gpt-ad-1713969330814-0" style="height: 200px; width: 500px;"></div>
+  <script>
+    googletag.cmd.push(() => {
+      // Request and render an ad for the "banner-ad" slot.
+      googletag.display("div-gpt-ad-1713969330814-0");
     });
   </script>
 </body>
