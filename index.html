@@ -17,13 +17,20 @@
       googletag
         .defineSlot('/21974715207/test-native', ['fluid'], 'div-gpt-ad-1713969330814-0')
         .addService(googletag.pubads());
+      googletag
+        .defineSlot('/21974715207/web-tft-comp-dropdown-native', ['fluid'], 'div-gpt-ad-1713969330814-1')
+        .addService(googletag.pubads());
+      googletag
+        .defineSlot('/21974715207/web-tft-champion-native-mobile', ['fluid'], 'div-gpt-ad-1713969330814-2')
+        .addService(googletag.pubads());
 
       // Enable the PubAdsService.
       googletag.enableServices();
 
       // Event listener for ad response.
       googletag.pubads().addEventListener('slotRenderEnded', function (event) {
-        if (event.slot.getSlotElementId() === 'div-gpt-ad-1713969330814-0') {
+        // Ensure the ad slot is displayed if an ad is loaded.
+        if (event.slot.getSlotElementId() === 'div-gpt-ad-1713969330814-0' && !event.isEmpty) {
           document.getElementById('div-gpt-ad-1713969330814-0').style.display = 'block';
         }
       });
@@ -56,8 +63,24 @@
       <div class="native-ad" id="div-gpt-ad-1713969330814-0"></div>
       <script>
         googletag.cmd.push(() => {
-          // Request and render an ad for the "banner-ad" slot.
+          // Request and render an ad for the "div-gpt-ad-1713969330814-0" slot.
           googletag.display("div-gpt-ad-1713969330814-0");
+        });
+      </script>
+
+      <div class="native-ad" id="div-gpt-ad-1713969330814-1"></div>
+      <script>
+        googletag.cmd.push(() => {
+          // Request and render an ad for the "div-gpt-ad-1713969330814-1" slot.
+          googletag.display("div-gpt-ad-1713969330814-1");
+        });
+      </script>
+
+      <div class="native-ad" id="div-gpt-ad-1713969330814-2"></div>
+      <script>
+        googletag.cmd.push(() => {
+          // Request and render an ad for the "div-gpt-ad-1713969330814-2" slot.
+          googletag.display("div-gpt-ad-1713969330814-2");
         });
       </script>
 
