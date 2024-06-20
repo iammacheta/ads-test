@@ -12,7 +12,7 @@
     googletag.cmd.push(() => {
       // Define ad slots.
       googletag
-        .defineSlot('/21974715207/test-300x600-riot-direct', [300, 600], "banner-ad")
+        .defineSlot('/21974715207/web-tft-leaderboard-right-banner-l', [300, 600], "banner-ad")
         .addService(googletag.pubads());
       googletag
         .defineSlot('/21974715207/test-native', ['fluid'], 'div-gpt-ad-1713969330814-0')
@@ -24,11 +24,7 @@
       // Event listener for ad response.
       googletag.pubads().addEventListener('slotRenderEnded', function (event) {
         if (event.slot.getSlotElementId() === 'div-gpt-ad-1713969330814-0') {
-          if (event.isEmpty) {
-            document.getElementById('div-gpt-ad-1713969330814-0').style.display = 'none';
-          } else {
-            document.getElementById('div-gpt-ad-1713969330814-0').style.display = 'block';
-          }
+          document.getElementById('div-gpt-ad-1713969330814-0').style.display = 'block';
         }
       });
     });
