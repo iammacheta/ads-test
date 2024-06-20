@@ -1,7 +1,6 @@
 .root {
     display: grid;
     grid-template-columns: 2fr 1fr;
-    /* Adjust the ratio according to your preference */
     gap: 20px;
 }
 
@@ -19,7 +18,6 @@
 .banner-ad,
 #div-gpt-ad-1713969330814-0 {
     width: 100%;
-    /* Ensure the ads use the full width of the column */
     margin: 20px 0;
 }
 
@@ -27,9 +25,9 @@
     padding: 10px;
     background-color: #151136;
     border-radius: 10px;
-    height: 200px;
     width: 100%;
     margin-bottom: 50px;
+    box-sizing: border-box;
 }
 
 nav ul {
@@ -46,4 +44,51 @@ header,
 footer,
 section {
     margin-bottom: 20px;
+}
+
+/* Media Queries for Adaptive Layout */
+@media (max-width: 1200px) {
+    .root {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .native-ad {
+        margin-bottom: 20px;
+    }
+
+    .ads {
+        align-items: stretch;
+    }
+}
+
+@media (max-width: 480px) {
+    .content,
+    .ads {
+        padding: 10px;
+    }
+
+    .banner-ad,
+    #div-gpt-ad-1713969330814-0 {
+        margin: 10px 0;
+    }
+
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
 }
