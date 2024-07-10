@@ -23,6 +23,9 @@
       googletag
         .defineSlot('/21974715207/web-tft-champion-native', ['fluid'], 'div-gpt-ad-1713969330814-2')
         .addService(googletag.pubads());
+      googletag
+        .defineSlot('/21974715207/web-test-native-banner-fluid', ['fluid'], 'div-gpt-ad-1713969330814-3')
+        .addService(googletag.pubads());
 
       // Enable the PubAdsService.
       googletag.enableServices();
@@ -76,11 +79,25 @@
         });
       </script>
 
+      <div>
+        <p>web-tft-champion-native</p>
+      </div>
       <div class="native-ad" id="div-gpt-ad-1713969330814-2"></div>
       <script>
         googletag.cmd.push(() => {
           // Request and render an ad for the "div-gpt-ad-1713969330814-2" slot.
           googletag.display("div-gpt-ad-1713969330814-2");
+        });
+      </script>
+
+      <div>
+        <p>web-test-native-banner-fluid</p>
+      </div>
+      <div class="native-ad" id="div-gpt-ad-1713969330814-3"></div>
+      <script>
+        googletag.cmd.push(() => {
+          // Request and render an ad for the "div-gpt-ad-1713969330814-3" slot.
+          googletag.display("div-gpt-ad-1713969330814-3");
         });
       </script>
 
